@@ -1,0 +1,13 @@
+# Required
+host:
+API_ORIGIN:
+
+# Optional
+image: ghcr.io/ondrejsika/counter-frontend
+replicas: 2
+clusterIssuer: letsencrypt
+# ingressExtraAnnotations:
+#   name: value
+#   foo: bar
+ingressExtraAnnotations: {}
+ingressClassName: nginx
