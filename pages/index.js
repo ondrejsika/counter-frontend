@@ -32,6 +32,8 @@ export default function Index(props) {
         alignItems: "center",
         height: "100vh",
         fontFamily: "Arial",
+        color: props.FONT_COLOR,
+        backgroundColor: props.BACKGROUND_COLOR,
       }}
     >
       <div
@@ -73,6 +75,8 @@ export async function getServerSideProps() {
       counter: data.counter,
       hostnameApi: data.hostname,
       extraText: data.extra_text,
+      FONT_COLOR: process.env.FONT_COLOR || "black",
+      BACKGROUND_COLOR: process.env.BACKGROUND_COLOR || "white",
     },
   };
 }
