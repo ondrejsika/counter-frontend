@@ -32,7 +32,6 @@ export default function Index(props) {
         alignItems: "center",
         height: "100vh",
         fontFamily: "Arial",
-        textAlign: "center",
       }}
     >
       <div
