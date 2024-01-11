@@ -40,7 +40,7 @@ export default function Index(props) {
           textAlign: "center",
         }}
       >
-        <H1>👋</H1>
+        <H1>👋 {props.extraText}</H1>
         <H1>{props.counter}</H1>
         {props.hostnameApi === props.HOSTNAME ? (
           <>
@@ -68,6 +68,7 @@ export async function getServerSideProps() {
       HOSTNAME: HOSTNAME,
       counter: data.counter,
       hostnameApi: data.hostname,
+      extraText: data.extra_text,
     },
   };
 }
