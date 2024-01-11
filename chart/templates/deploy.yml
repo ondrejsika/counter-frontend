@@ -22,6 +22,10 @@ spec:
             limits:
               cpu: 120m
               memory: 200Mi
+          startupProbe:
+            httpGet:
+              path: /api/livez
+              port: 3000
           env:
             - name: API_ORIGIN
               value: {{ required ".Values.API_ORIGIN is required" .Values.API_ORIGIN }}
