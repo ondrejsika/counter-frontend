@@ -53,6 +53,11 @@ export default function Index(props) {
           </>
         )}
       </div>
+      <style jsx global>{`
+        body {
+          margin: 0;
+        }
+      `}</style>
     </div>
   );
 }
