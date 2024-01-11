@@ -27,23 +27,33 @@ export default function Index(props) {
   return (
     <div
       style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
         fontFamily: "Arial",
         textAlign: "center",
       }}
     >
-      <H1>👋</H1>
-      <H1>{props.counter}</H1>
-      {props.hostnameApi === props.HOSTNAME ? (
-        <>
-          <H2>{props.HOSTNAME} (frontend)</H2>
-          <H2>{props.hostnameApi} (backend)</H2>
-        </>
-      ) : (
-        <>
-          <H2>{props.HOSTNAME}</H2>
-          <H2>{props.hostnameApi}</H2>
-        </>
-      )}
+      <div
+        style={{
+          textAlign: "center",
+        }}
+      >
+        <H1>👋</H1>
+        <H1>{props.counter}</H1>
+        {props.hostnameApi === props.HOSTNAME ? (
+          <>
+            <H2>{props.HOSTNAME} (frontend)</H2>
+            <H2>{props.hostnameApi} (backend)</H2>
+          </>
+        ) : (
+          <>
+            <H2>{props.HOSTNAME}</H2>
+            <H2>{props.hostnameApi}</H2>
+          </>
+        )}
+      </div>
     </div>
   );
 }
