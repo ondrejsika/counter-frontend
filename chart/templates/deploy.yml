@@ -25,6 +25,14 @@ spec:
           env:
             - name: API_ORIGIN
               value: {{ required ".Values.API_ORIGIN is required" .Values.API_ORIGIN }}
+            {{ if .Values.FONT_COLOR }}
+            - name: FONT_COLOR
+              value: {{ .Values.FONT_COLOR | quote }}
+            {{ end }}
+            {{ if .Values.BACKGROUND_COLOR }}
+            - name: BACKGROUND_COLOR
+              value: {{ .Values.BACKGROUND_COLOR | quote }}
+            {{ end }}
           ports:
             - containerPort: 3000
 

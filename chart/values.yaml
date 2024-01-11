@@ -3,6 +3,9 @@ host:
 API_ORIGIN:
 
 # Optional
+FONT_COLOR: null
+BACKGROUND_COLOR: null
+
 image: ghcr.io/ondrejsika/counter-frontend
 replicas: 2
 clusterIssuer: letsencrypt
