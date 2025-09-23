@@ -1,4 +1,4 @@
-FROM node:16-slim
+FROM node:24-slim
 LABEL org.opencontainers.image.source=https://github.com/ondrejsika/counter-frontend
 WORKDIR /app
 COPY package.json yarn.lock ./
